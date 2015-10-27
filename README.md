@@ -115,7 +115,7 @@ This section tries to explain usage in code comment style:
 Marathon app env variables are available to be called in the template.
 The default template shipped with Bamboo is aware of `BAMBOO_TCP_PORT`. When this variable is specified in Marathon app creation, the application will be configured with TCP mode. For example:
 
-## Superordinate Domain change ##
+###### Superordinate Domain change ##
 
 In config/haproxy_template.cfg, change klouds.org to your domain name. Implementation of env var coming eventually.
 
