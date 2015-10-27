@@ -30,6 +30,7 @@ type HealthCheck struct {
 type App struct {
 	Id              string
 	EscapedId       string
+	Name 		string
 	HealthCheckPath string
 	HealthChecks    []HealthCheck
 	Tasks           []Task
@@ -193,6 +194,7 @@ func createApps(tasksById map[string][]marathonTask, marathonApps map[string]mar
 		app := App{
 			Id:              appPath,
 			EscapedId:       strings.Replace(appId, "/", "::", -1),
+			Name:		 strings.Replace(appId, "/", "", -1),
 			HealthCheckPath: parseHealthCheckPath(mApp.HealthChecks),
 			Env:             mApp.Env,
 			Labels:          mApp.Labels,
